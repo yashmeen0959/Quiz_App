@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<title>Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style rel="stylesheet" href=""></style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+</style>
+
+<body class="light-grey">
+
+    <!-- Top container -->
+    <div class="bar top black large" style="z-index:4">
+        <button class="bar-item button hide-large hover-none hover-text-light-grey" onclick="nav_open();"><i class="fa fa-bars"></i>  Menu</button>
+        <span class="bar-item right"><a href="index1.html">Logout</a></span>
+
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="container row">
+            
+            <div class="col s8 bar">
+                <span>Welcome, <strong id="profile_name">Harsh</strong></span><br>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h5>Dashboard</h5>
+        </div>
+        <div class="bar-block">
+            <!-- <a href="#" class="bar-item button padding-16 hide-large dark-grey hover-black" onclick="nav_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a> -->
+            <a href="#" onclick="dashboard();" class="bar-item button padding blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+            <a href="index.html" onclick="profile();"class="bar-item button padding"><i class="fa fa-id-card fa-fw"></i> Courses </a>
+            <a href="#" onclick="leaderboard();"class="bar-item button padding"><i class="fa fa-line-chart fa-fw"></i> Leader Board</a>
+        </div>
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="overlay hide-large animate-opacity" onclick="nav_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="main" style="margin-left:300px;margin-top:43px;" id="main-block">
+
+        <!-- Header -->
+        <header class="container" style="padding-top:22px">
+            <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+        </header>
+
+        <div class="row-padding margin-bottom">
+            <div class="quarter">
+                <div class="container orange padding-16" onclick="loadQuiz('quantitative');">
+                    <div class="left"><i class="fa fa-calculator xxxlarge"></i></div>
+                    <div class="right">
+                        <h3 id="quants">52</h3>
+                    </div>
+                    <div class="clear"></div>
+                    <h4>HTML</h4>
+                </div>
+            </div>
+            <div class="quarter">
+                <div class="container brown padding-16" onclick="loadQuiz('quantitative');">
+                    <div class="left"><i class="fa fa-language xxxlarge"></i></div>
+                    <div class="right">
+                        <h3 id="verbal">99</h3>
+                    </div>
+                    <div class="clear"></div>
+                    <h4>CSS</h4>
+                </div>
+            </div>
+            <div class="quarter">
+                <div class="container grey padding-16" onclick="loadQuiz('quantitative');">
+                    <div class="left"><i class="fa fa-share-alt xxxlarge"></i></div>
+                    <div class="right">
+                        <h3 id="logic">23</h3>
+                    </div>
+                    <div class="clear"></div>
+                    <h4>Programming</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- leader boards -->
+    <div class="main" style="margin-left:300px;margin-top:43px;" id="leaderboards-block">
+
+        <!-- Header -->
+
+       
+
+        <header class="container" style="padding-top:22px">
+            <h5><b><i class="fa fa-dashboard"></i> Leader Boards!!</b></h5>
+        </header>
+
+        <table id = "table-main">
+            <tr>
+              <th>Username</th>
+              <th>Total Score</th>
+            </tr>
+             <tr>
+              <td>Abhi</td>
+              <td>50</td>
+             
+            </tr>
+            <tr>
+              <td>Sam</td>
+              <td>35</td>
+            </tr>
+            <tr>
+              <td>Nick</td>
+              <td>20</td>
+            </tr>
+          </table>
+        
+    </div>
+    <!-- leader boards ends -->
+
+      <!-- Quiz page -->
+      <div class="main" style="margin-left:300px;margin-top:43px;" id="quiz-block">
+
+        <!-- Header -->
+
+       <H1>What is HTML?</h1>
+	   <ul><li>HTML stands for Hyper Text Markup Language</li>
+<li>HTML is the standard markup language for creating Web pages</li>
+<li>HTML describes the structure of a Web page</li>
+<li>HTML consists of a series of elements</li>
+<li>HTML elements tell the browser how to display the content</li>
+<li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li></ul>
+        
+    </div>
+    <!-- Quiz ends -->
+        <script src="dashboard.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        
+
+       
+
+</body>
+
+</html>
